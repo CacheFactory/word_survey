@@ -8133,3 +8133,1371 @@ Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 22:32:28 -0500
 Served asset /application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 22:42:16 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.7ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (65.2ms)
+Completed 200 OK in 208ms (Views: 119.8ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /word_survey.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 22:42:17 -0500
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 22:47:09 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.8ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (20.2ms)
+Completed 200 OK in 94ms (Views: 88.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 22:47:10 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/reports" for 127.0.0.1 at 2013-07-07 23:32:55 -0500
+Processing by ReportsController#index as HTML
+  [1m[36mAdjective Load (51.0ms)[0m  [1mSELECT "adjectives".* FROM "adjectives" [0m
+  [1m[35mEXPLAIN (9.2ms)[0m  EXPLAIN SELECT "adjectives".* FROM "adjectives" 
+EXPLAIN for: SELECT "adjectives".* FROM "adjectives" 
+                         QUERY PLAN
+-------------------------------------------------------------
+ Seq Scan on adjectives  (cost=0.00..2.05 rows=105 width=31)
+(1 row)
+
+  [1m[36mWord Load (0.5ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35m (10.1ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (13.9ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (12.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (26.1ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'[0m
+  Rendered reports/index.html.slim within layouts/application (4056.8ms)
+Completed 200 OK in 5414ms (Views: 4324.9ms | ActiveRecord: 270.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/reports" for 127.0.0.1 at 2013-07-07 23:34:44 -0500
+Processing by ReportsController#index as HTML
+  [1m[36mAdjective Load (0.7ms)[0m  [1mSELECT "adjectives".* FROM "adjectives" [0m
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" 
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 1 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 2 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 3 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 4 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 5 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 6 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 7 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 8 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 9 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 10 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 11 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 12 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 13 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 14 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 15 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 16 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 17 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 18 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 19 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 20 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 21 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 22 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 23 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 24 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 25 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 26 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 27 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 28 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 29 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 30 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 31 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 32 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 33 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 34 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 35 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 36 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 37 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 38 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 39 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 40 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 41 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 42 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 43 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 44 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 45 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 46 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 47 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 48 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 49 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 50 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 51 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 52 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 53 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 54 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 55 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 56 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 57 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 58 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 59 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 60 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 61 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 62 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 63 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 64 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 65 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 66 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 67 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 68 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 69 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 70 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 71 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 72 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 73 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 74 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 75 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 76 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 77 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 78 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 79 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 80 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 81 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 82 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 83 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 84 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 85 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 86 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 87 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 88 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 89 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 90 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 91 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 92 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 93 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 94 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 95 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 96 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 97 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 98 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 99 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 100 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 101 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 102 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 103 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 104 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 1 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 2 AND "responses"."positive" = 't'
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 3 AND "responses"."positive" = 't'[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "responses" WHERE "responses"."adjective_id" = 105 AND "responses"."word_id" = 4 AND "responses"."positive" = 't'
+  Rendered reports/index.html.slim within layouts/application (463.6ms)
+Completed 200 OK in 786ms (Views: 547.3ms | ActiveRecord: 131.9ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /lib/01_underscore-min.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /lib/02_backbone-min.js - 200 OK (1ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /word_survey.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:34:45 -0500
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:37:37 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.5ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (75.7ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 91ms (Views: 86.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:38 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.5ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (17.7ms)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:39 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.4ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.6ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (18.1ms)
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:37:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.5ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.6ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (18.5ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 86ms (Views: 81.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:08 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.6ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (18.1ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:46 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.5ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (18.6ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /word_survey.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:56 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.6ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (17.8ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:39:59 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.2ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.5ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (17.8ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 31ms (Views: 26.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:08 -0500
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.6ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (18.5ms)
+Completed 200 OK in 27ms (Views: 22.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:40:09 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (0.3ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mAdjective Load (0.5ms)[0m  SELECT "adjectives".* FROM "adjectives" 
+  Rendered responses/index.html.slim within layouts/application (17.4ms)
+Compiled application.css  (0ms)  (pid 23368)
+Completed 200 OK in 82ms (Views: 77.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-07 23:41:20 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/responses" for 127.0.0.1 at 2013-07-07 23:41:32 -0500
+Processing by ResponsesController#create as JSON
+  Parameters: {"positive"=>true, "word_id"=>2, "adjective_id"=>14, "response"=>{"word_id"=>2, "positive"=>true, "adjective_id"=>14}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.3ms)[0m  INSERT INTO "responses" ("adjective_id", "created_at", "positive", "updated_at", "word_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["adjective_id", 14], ["created_at", Mon, 08 Jul 2013 04:41:32 UTC +00:00], ["positive", true], ["updated_at", Mon, 08 Jul 2013 04:41:32 UTC +00:00], ["word_id", 2]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 37ms (Views: 0.7ms | ActiveRecord: 24.9ms)
+
+
+Started POST "/responses" for 127.0.0.1 at 2013-07-07 23:41:34 -0500
+Processing by ResponsesController#create as JSON
+  Parameters: {"positive"=>false, "word_id"=>2, "adjective_id"=>51, "response"=>{"word_id"=>2, "positive"=>false, "adjective_id"=>51}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("adjective_id", "created_at", "positive", "updated_at", "word_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["adjective_id", 51], ["created_at", Mon, 08 Jul 2013 04:41:34 UTC +00:00], ["positive", false], ["updated_at", Mon, 08 Jul 2013 04:41:34 UTC +00:00], ["word_id", 2]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/responses" for 127.0.0.1 at 2013-07-07 23:42:03 -0500
+Processing by ResponsesController#create as JSON
+  Parameters: {"positive"=>false, "word_id"=>3, "adjective_id"=>47, "response"=>{"word_id"=>3, "positive"=>false, "adjective_id"=>47}}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "responses" ("adjective_id", "created_at", "positive", "updated_at", "word_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["adjective_id", 47], ["created_at", Mon, 08 Jul 2013 04:42:03 UTC +00:00], ["positive", false], ["updated_at", Mon, 08 Jul 2013 04:42:03 UTC +00:00], ["word_id", 3]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/responses" for 127.0.0.1 at 2013-07-07 23:42:06 -0500
+Processing by ResponsesController#create as JSON
+  Parameters: {"positive"=>false, "word_id"=>1, "adjective_id"=>45, "response"=>{"word_id"=>1, "positive"=>false, "adjective_id"=>45}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("adjective_id", "created_at", "positive", "updated_at", "word_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["adjective_id", 45], ["created_at", Mon, 08 Jul 2013 04:42:06 UTC +00:00], ["positive", false], ["updated_at", Mon, 08 Jul 2013 04:42:06 UTC +00:00], ["word_id", 1]]
+  [1m[35m (2.2ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 3.0ms)
