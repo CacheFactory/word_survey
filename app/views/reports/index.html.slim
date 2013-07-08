@@ -1,0 +1,11 @@
+table
+  tr
+    td Adjective
+    -@words.each do |word|
+      td #{word.word}
+  -@adjectives.each do |adjective|
+    tr 
+      td #{adjective.adjective}
+      -@words.each do |word|
+        td #{adjective.responses.where(word_id: word.id, positive: true).count}
+        

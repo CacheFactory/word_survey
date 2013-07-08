@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: word_survey_dev
+  pool: 5
+  username: Eddie
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: word_survey_test
+  pool: 5
+  username: Eddie
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: word_survey_prod
+  pool: 5
+  username: Eddie
+  password:
+  host: localhost
