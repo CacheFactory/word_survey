@@ -9529,3 +9529,154 @@ ActionController::RoutingError (No route matches [DELETE] "/users/sign_out"):
 
 
   Rendered /Users/Eddie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 10:57:35 -0500
+Processing by ResponsesController#index as HTML
+  [1m[36mWord Load (46.1ms)[0m  [1mSELECT "words".* FROM "words" [0m
+  [1m[35mEXPLAIN (8.9ms)[0m  EXPLAIN SELECT "words".* FROM "words" 
+EXPLAIN for: SELECT "words".* FROM "words" 
+                        QUERY PLAN
+----------------------------------------------------------
+ Seq Scan on words  (cost=0.00..11.40 rows=140 width=537)
+(1 row)
+
+  [1m[36mAdjective Load (5.2ms)[0m  [1mSELECT "adjectives".* FROM "adjectives" [0m
+  Rendered responses/index.html.slim within layouts/application (75.9ms)
+Compiled application.css  (0ms)  (pid 29918)
+Completed 200 OK in 1104ms (Views: 251.0ms | ActiveRecord: 733.0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /word_survey.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/mooning.jpg" for 127.0.0.1 at 2013-07-09 10:57:36 -0500
+Served asset /mooning.jpg - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/mooning.jpg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/Eddie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/Eddie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/Eddie/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Eddie/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Processing by ResponsesController#index as HTML
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" 
+  [1m[36mAdjective Load (0.8ms)[0m  [1mSELECT "adjectives".* FROM "adjectives" [0m
+  Rendered responses/index.html.slim within layouts/application (17.5ms)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:38 -0500
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Processing by ResponsesController#index as HTML
+  [1m[35mWord Load (0.3ms)[0m  SELECT "words".* FROM "words" 
+  [1m[36mAdjective Load (0.6ms)[0m  [1mSELECT "adjectives".* FROM "adjectives" [0m
+  Rendered responses/index.html.slim within layouts/application (17.4ms)
+Compiled application.css  (0ms)  (pid 29918)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/word_survey.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /word_survey.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/01_underscore-min.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /lib/01_underscore-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lib/02_backbone-min.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /lib/02_backbone-min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mooning.png" for 127.0.0.1 at 2013-07-09 10:57:48 -0500
+Served asset /mooning.png - 200 OK (2ms)
